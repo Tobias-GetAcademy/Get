@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Litt og ditt</title>
+    <style>
+        div {
+            color: Green;
+            background-color: LightBlue;
+            padding: 10px;
+            margin: 10px;
+            border: solid red 2px;
+            width: 30px;
+            height: 30px;
+            float: left;
+        }
+        div.førstpålinja {
+            clear: left;
+		}
+     </style>
+</head>
+<body>
+
+    <div id="r1k1" onclick="trykk(this, 'r1k2','r2k1','r2k1','r2k1')">7</div>
+    <div id="r1k2" onclick="trykk(this, 'r1k1','r1k3','r2k2','r2k2')">4</div>
+    <div id="r1k3" onclick="trykk(this, 'r1k2','r2k3','r2k3','r2k3')">1</div>
+
+    <div id="r2k1" class="førstpålinja" onclick="trykk(this, 'r2k2','r1k1','r3k1','r3k1')">6</div>
+    <div id="r2k2" id="blankFraStart" onclick="trykk(this, 'r1k2','r2k1','r2k3','r3k2')"></div>
+    <div id="r2k3" onclick="trykk(this, 'r1k3','r2k2','r3k3','r3k3')">8</div>
+
+    <div id="r3k1" class="førstpålinja" onclick="trykk(this, 'r2k1','r3k2','r3k2','r3k2')">2</div>
+    <div id="r3k2" onclick="trykk(this, 'r3k1','r2k2','r3k3','r3k3')">5</div>
+    <div id="r3k3" onclick="trykk(this, 'r3k2','r2k3','r2k3','r2k3')">3</div>
+    
+    <script>
+
+         function trykk(tagElement, alt1, alt2, alt3, alt4) {
+             if(document.getElementById(alt1).innerHTML == '') {
+                document.getElementById(alt1).innerHTML = tagElement.innerHTML;
+                tagElement.innerHTML = '';
+		     }
+             if(document.getElementById(alt2).innerHTML == '') {
+                document.getElementById(alt2).innerHTML = tagElement.innerHTML;
+                tagElement.innerHTML = ''
+		     }
+             if(document.getElementById(alt3).innerHTML == '') {
+                document.getElementById(alt3).innerHTML = tagElement.innerHTML;
+                tagElement.innerHTML = ''
+		     }
+             if(document.getElementById(alt4).innerHTML == '') {
+                document.getElementById(alt4).innerHTML = tagElement.innerHTML;
+                tagElement.innerHTML = ''
+		     }
+		}
+
+    </script>
+</body>
+</html>

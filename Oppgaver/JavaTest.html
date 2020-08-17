@@ -1,0 +1,89 @@
+﻿  
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>Quiz</title>
+
+
+<style>
+
+    /*
+	#box {
+		height: 300px;
+		width: 300px;
+		background-color: blue;
+		float: right;
+		margin-top: -150px;
+	}
+	*/
+
+	#sol {
+		cursor: pointer;
+		transition-property: background-color;
+	}
+
+</style>
+</head>
+<body>
+	
+	<h1 onclick="alert('Hallo');" >Overskrift</h1>
+
+	<h2 id="a1">Hvilken farge er blå?</h2>
+	<h2 id="a2">Hvilken farge er gul?</h2>
+	<h2 id="a3">Hvilken farge er rød?</h2>
+	<div id="box"></div>
+
+
+	<h2 id="sol" onclick="doSomething()">Trykk Her</h2>
+
+	<script>
+
+		
+		var pushed = true;
+		
+
+
+		/* initiation script for a1-a3 content */
+
+//		function start() {
+//
+//			if (pushed == false) {
+//                document.getElementById('a1').innerHTML = "";
+//                document.getElementById('a2').innerHTML = "";
+//				document.getElementById('a3').innerHTML = "";
+//                document.getElementById("box").style.display = "none";
+//
+//                pushed = true;
+//			}
+//		}
+
+		/* modification script for a1-a3 content */
+		function doSomething() {
+
+			if (pushed == true) {
+
+				document.getElementById('a1').innerHTML = 'Blå';
+				document.getElementById('a2').innerHTML = 'Gul';
+				document.getElementById('a3').innerHTML = 'Rød';
+//				document.getElementById("box").style.display = "block"; 
+				pushed = false;
+                document.getElementById("sol").style.backgroundColor = 'white';
+
+			}
+			else {
+
+                document.getElementById('a1').innerHTML = 'Hvilken farge er blå?';
+                document.getElementById('a2').innerHTML = 'Hvilken farge er gul?';
+                document.getElementById('a3').innerHTML = 'Hvilken farge er rød?';
+//				document.getElementById("box").style.display = "none"; 
+				pushed = true;
+                document.getElementById("sol").style.backgroundColor = 'pink';
+            }
+
+		}
+		
+	</script>
+</body>
+</html>

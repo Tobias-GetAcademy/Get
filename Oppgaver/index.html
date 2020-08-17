@@ -4,11 +4,80 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        div.page {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            grid-template-rows: 80px 1fr 40px;
+            grid-template-areas: 'header header' 'menu mainContent' 'footer footer'
+        }
+
+        div.header {
+            text-align: center;
+            background-color: aqua;
+            grid-area: header;
+        }
+
+        div.menu {
+            background-color: aquamarine;
+            grid-area: menu;
+            padding: 5px;
+        }
+
+        div.mainContent {
+            background-color: blanchedalmond;
+            grid-area: mainContent;
+        }
+
+        div.footer {
+            background-color: lightgrey;
+            grid-area: footer;
+            text-align: right;
+        }
+    </style>
 </head>
 <body>
-<a href="https://tobias-getacademy.github.io/Get/index.html">index</a> <br>
-<a target="_blank"href="Level1.HTML">Level1.HTML</a> <br>
-<a target="_blank" href="Ludo-Brett.html">Ludo-Brett.html</a> <br>
-<a target="_blank" href="snoMann.html">snoMann.html</a> <br>
+    <div class="page">
+        <div class="header"><h1>Opggaver</h1></div>
+        <div class="menu">
+            <h3> Linker</h3> <a href="https://tobias-getacademy.github.io/Get/About.html">about</a> <br>
+            <a href="https://tobias-getacademy.github.io/Get/index.html">index</a>  <br>
+            <a href="Oppgaver/index.html">Oppgaver</a>
+            <a href="https://tobias-getacademy.github.io/Get/index.html">index</a> <br>
+            <a target="_blank" href="Level1.HTML">Level1.HTML</a> <br>
+            <a target="_blank" href="Ludo-Brett.html">Ludo-Brett.html</a> <br>
+            <a target="_blank" href="snoMann.html">snoMann.html</a> <br>
+
+        </div>
+        <div class="mainContent">
+            MainContent
+            <p>
+                text test text test text test text test text test text test text test text test
+                text test text test text test text test text test text test text test text test
+                text test text test text test text test text test text test text test text test
+                text test text test text test text test text test text test text test text test
+            </p>
+            <p>
+                text test text test text test text test text test text test text test text test
+                text test text test text test text test text test text test text test text test
+                text test text test text test text test text test text test text test text test
+                text test text test text test text test text test text test text test text test
+            </p>
+            <p>
+                text test text test text test text test text test text test text test text test
+                text test text test text test text test text test text test text test text test
+                text test text test text test text test text test text test text test text test
+                text test text test text test text test text test text test text test text test
+            </p>
+        </div>
+        <div class="footer"><p>Copyright 2020 by my website &copy;</p></div>
+    </div>
+
 </body>
 </html>

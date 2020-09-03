@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            
+        }
+        div.page {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            grid-template-rows: 80px 1fr 40px;
+            grid-template-areas: 'header header'
+                                 'menu mainContent'
+                                 'footer footer'
+        }
+        div.header {
+            text-align: center;
+            background-color: #7395ae;
+            grid-area: header;
+            padding: 10px
+        }
+        div.menu {
+            background-color: #376983;
+            grid-area: menu;
+            padding: 0px 50px 50px 50px;
+        }
+        div.mainContent {
+            background-color: #5D5C61;
+            grid-area: mainContent;
+            padding: 0px 50px 50px 50px;
+
+        }
+        div.footer {
+            background-color: #B1A269;
+            grid-area: footer;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+//model variabels
+//veiw what you see
+updateVeiw();
+function updateVeiw() {
+    document.getElementById('app').innerHTML = `
+        <div class="page">
+            <div class="header"><h1>Index</h1></div>
+            <div class="menu"><h3> Linker</h3> <a href="https://tobias-getacademy.github.io/Get/About.html">about</a> <br>
+            <a href="https://tobias-getacademy.github.io/Get/index.html">index</a>  <br>
+            <a href="Oppgaver/index.html">Oppgaver</a>
+
+        </div>
+            <div class="mainContent"><h2>MainContent</h2>  
+                <p> Work in Progress</p></div>
+            <div class="footer"><p>Copyright 2020 by my website &copy;</p></div>
+        </div>
+    `;
+}
+//controller functions
+    </script>
+</body>
+</html>  
